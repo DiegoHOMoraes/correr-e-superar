@@ -471,6 +471,12 @@ ul  { list-style: none; }
   text-align: center;
 }
 .about-photo-placeholder svg { opacity: 0.3; }
+.about-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* -------- CAMISAS -------- */
 .shirts { background: var(--off-white); padding: 64px 0; }

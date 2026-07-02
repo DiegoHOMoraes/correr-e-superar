@@ -1,0 +1,13 @@
+# Dependências (Railway instala na nuvem)
+node_modules/
+
+# Helpers locais de preview — não vão para produção
+.claude/
+
+# Documentos de origem (não precisam ser publicados)
+Copy.txt
+Design System.txt
+
+# Sistema operacional
+Thumbs.db
+.DS_Store

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Treinão Especial — Correr e Superar em Jaboatão dos Guararapes. Inscreva-se por R$ 30,00 e faça parte dessa comunidade.">
+  <title>Correr e Superar — Treinão Especial Jaboatão dos Guararapes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       DEFINIÇÕES SVG REUTILIZÁVEIS
+       (emblema CS + mockups das camisas)
+  =========================================== -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <defs>
+      <!-- Caminho circular para o texto ao redor da logo -->
+      <path id="cs-ring" d="M 24,100 A 76,76 0 1 1 176,100 A 76,76 0 1 1 24,100" fill="none"/>
+
+      <!-- LOGO CS (colorida) -->
+      <symbol id="cs-logo" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="100" fill="#FF5C00"/>
+        <text class="cs-ring-text" fill="#0A0A0A">
+          <textPath href="#cs-ring" startOffset="0">CORRER E SUPERAR · CORRER E SUPERAR ·</textPath>
+        </text>
+        <text class="cs-letters" x="100" y="133" text-anchor="middle" fill="#0A0A0A">CS</text>
+      </symbol>
+
+    </defs>
+  </svg>
+
+  <!-- ==========================================
+       HEADER
+  =========================================== -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="#inicio" class="header-logo" aria-label="Correr e Superar — página inicial">
+        <svg class="logo-mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <use href="#cs-logo"></use>
+        </svg>
+        <span class="logo-word">Correr <span>e</span> Superar</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="nav" aria-label="Navegação principal">
+        <ul class="nav-list" role="list">
+          <li><a href="#inscricoes">Inscrições</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#camisas">Camisas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       MAIN
+  =========================================== -->
+  <main id="inicio">
+
+    <!-- HERO -->
+    <section id="inscricoes" class="hero" aria-labelledby="hero-title">
+      <svg class="hero-watermark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <use href="#cs-logo"></use>
+      </svg>
+
+      <div class="container hero-inner">
+        <div class="hero-content animate-in">
+          <p class="hero-eyebrow">Jaboatão dos Guararapes — PE</p>
+          <h1 id="hero-title" class="hero-title">Treinão<br><span>Especial</span></h1>
+          <p class="hero-subtitle">Uma corrida que transforma. Uma comunidade que acolhe.</p>
+        </div>
+
+        <aside class="hero-card animate-in" aria-label="Informações de inscrição e ingresso">
+          <span class="hero-card-badge">Mais Procurado</span>
+          <h2 class="hero-card-title">Inscreva-se</h2>
+
+          <div class="hero-price-block">
+            <span class="hero-price-label">Por apenas</span>
+            <span class="hero-price">R$ 30,00</span>
+          </div>
+
+          <div class="hero-includes">
+            <p class="hero-includes-title">O que está incluso</p>
+            <p>Medalha após a conclusão do treinão, alimentação e hidratação ao chegar no local de concentração, ao término do treino, participação em nossos sorteios e de parceiros.</p>
+          </div>
+
+          <dl class="hero-info-grid" aria-label="Informações do evento">
+            <div class="hero-info-item">
+              <dt class="hero-info-label">Local</dt>
+              <dd class="hero-info-value">Jaboatão — PE</dd>
+            </div>
+            <div class="hero-info-item">
+              <dt class="hero-info-label">Concentração</dt>
+              <dd class="hero-info-value">5h30</dd>
+            </div>
+            <div class="hero-info-item">
+              <dt class="hero-info-label">Distância</dt>
+              <dd class="hero-info-value">5KM / Caminhada</dd>
+            </div>
+          </dl>
+
+          <a href="https://wa.me/5581995609589?text=Ol%C3%A1%2C%20quero%20me%20inscrever%20no%20Trein%C3%A3o%20Especial!"
+             class="btn-primary btn-full" target="_blank" rel="noopener noreferrer"
+             aria-label="Inscreva-se agora pelo WhatsApp">Inscreva-se Agora</a>
+        </aside>
+      </div>
+    </section>
+
+    <div class="divider" role="presentation" aria-hidden="true"></div>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title" class="section-title">Confira Nossos Treinões</h2>
+
+        <div class="gallery-grid" role="list" aria-label="Galeria de fotos dos treinões">
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Foto do Treinão</span>
+            </div>
+            <figcaption class="sr-only">Foto do grupo no treinão especial</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Alimentação</span>
+            </div>
+            <figcaption class="sr-only">Momento de alimentação e hidratação</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Sorteios</span>
+            </div>
+            <figcaption class="sr-only">Momento dos sorteios do treinão</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Medalhas</span>
+            </div>
+            <figcaption class="sr-only">Entrega de medalhas aos participantes</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <div class="gallery-placeholder" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Percurso</span>
+            </div>
+            <figcaption class="sr-only">Corrida no percurso de 5KM</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="presentation" aria-hidden="true"></div>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about" aria-labelledby="about-title">
+      <div class="container">
+        <span class="section-label">Nossa história</span>
+        <h2 id="about-title" class="section-title">Sobre o Correr e Superar</h2>
+
+        <p class="about-text">O Correr e Superar nasceu do desejo simples de sair do lugar comum, dar o primeiro passo e transformar a rotina por meio da corrida. O que começou com encontros despretensiosos, poucas pessoas e muita vontade de evoluir, logo se tornou algo muito maior. Desde o início, o grupo carregou um propósito claro: unir pessoas em torno do movimento, da saúde e da superação diária — tudo isso no coração de Jaboatão dos Guararapes.</p>
+
+        <p class="about-text">Para o Correr e Superar, correr nunca significou apenas cumprir distâncias ou bater recordes. A corrida sempre foi entendida como um processo — de aprendizado, disciplina e compromisso. Cada treino representa mais do que esforço físico: é um momento de troca, incentivo e fortalecimento coletivo, onde ninguém fica para trás.</p>
+
+        <div class="values-grid" role="list" aria-label="Valores do grupo Correr e Superar">
+          <article class="value-card" role="listitem">
+            <h3 class="value-card-title">Essência do Grupo</h3>
+            <p class="value-card-text">O Correr e Superar é construído sobre valores como união, respeito e crescimento conjunto. Acreditamos que cada pessoa tem seu próprio tempo e sua própria jornada, e nosso papel como grupo é apoiar, incentivar e caminhar lado a lado — sem comparações, mas com empatia e parceria.</p>
+          </article>
+
+          <article class="value-card" role="listitem">
+            <h3 class="value-card-title">Compromisso e Organização</h3>
+            <p class="value-card-text">Levamos a organização a sério. Cada treino é pensado com responsabilidade, os percursos são planejados com atenção e a segurança dos participantes é sempre prioridade. Esse cuidado cria um ambiente confiável, acolhedor e preparado para receber corredores de todos os níveis.</p>
+          </article>
+
+          <article class="value-card" role="listitem">
+            <h3 class="value-card-title">Evolução Contínua</h3>
+            <p class="value-card-text">A evolução acontece passo a passo. No Correr e Superar, valorizamos o progresso constante — seja ele físico, mental ou emocional. Mais importante do que velocidade ou desempenho é a constância e o compromisso com uma evolução saudável e consciente.</p>
+          </article>
+
+          <article class="value-card" role="listitem">
+            <h3 class="value-card-title">Força Coletiva</h3>
+            <p class="value-card-text">A energia do grupo é o que nos move. Correr em conjunto fortalece, motiva e cria laços que vão muito além dos treinos. Aqui, o incentivo é diário e o apoio mútuo faz com que cada desafio se torne mais leve quando enfrentado em equipe.</p>
+          </article>
+
+          <article class="value-card" role="listitem">
+            <h3 class="value-card-title">Constância e Superação</h3>
+            <p class="value-card-text">Entendemos que nem todos os dias são iguais. Por isso, ensinamos que superar é respeitar o próprio corpo, manter a disciplina e seguir em frente com equilíbrio. A constância é o que transforma pequenas conquistas em grandes resultados ao longo do tempo.</p>
+          </article>
+        </div>
+
+        <p class="about-text">Com o passar do tempo, o grupo foi crescendo de forma natural em Jaboatão dos Guararapes. Pessoas com diferentes histórias começaram a se juntar, cada uma carregando seus próprios motivos para correr. Alguns buscavam mais saúde, outros queriam vencer o sedentarismo, enquanto muitos encontraram na corrida uma forma de recomeço e fortalecimento pessoal. Independentemente do objetivo, todos encontraram no Correr e Superar um espaço de acolhimento e incentivo.</p>
+
+        <div class="about-photo-block" role="img" aria-label="Foto do grupo Correr e Superar">
+          <div class="about-photo-placeholder" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Foto do grupo</span>
+          </div>
+        </div>
+
+        <p class="about-text about-text--spaced">À medida que o grupo evoluía, os treinos também se tornaram mais estruturados. Houve um cuidado maior com planejamento, orientação e bem-estar dos participantes. A corrida passou a ser acompanhada de atenção à preparação física, à recuperação e aos hábitos saudáveis, reforçando a ideia de que cuidar do corpo é parte essencial do processo.</p>
+
+        <div class="about-photo-block" role="img" aria-label="Foto dos treinos do grupo">
+          <div class="about-photo-placeholder" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Foto dos treinos</span>
+          </div>
+        </div>
+
+        <p class="about-text about-text--spaced">A presença do grupo em eventos, provas e treinões especiais passou a fazer parte da trajetória do Correr e Superar. Cada participação reforçava a identidade construída: pessoas comuns, com desafios reais, que acreditam na força do coletivo. As conquistas individuais passaram a ser celebradas como vitórias de todos, fortalecendo ainda mais os vínculos entre os integrantes.</p>
+
+        <p class="about-text">Com isso, o Correr e Superar deixou de ser apenas um grupo de corrida e se transformou em uma verdadeira comunidade em Jaboatão dos Guararapes — um ambiente onde amizades surgiram, metas foram alcançadas e histórias de superação ganharam significado. A corrida passou a representar um estilo de vida baseado em equilíbrio, persistência e evolução constante.</p>
+
+        <div class="about-photo-block" role="img" aria-label="Foto da comunidade Correr e Superar">
+          <div class="about-photo-placeholder" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Foto da comunidade</span>
+          </div>
+        </div>
+
+        <p class="about-text about-text--spaced">Hoje, o Correr e Superar segue firme em sua missão, mantendo viva a essência que deu origem ao grupo. Com treinos organizados, espírito de equipe e foco no desenvolvimento individual, continuamos crescendo e inspirando novos corredores a darem o primeiro passo.</p>
+
+        <p class="about-text">Cada treino carrega aprendizado. Cada passo simboliza avanço. E cada pessoa que faz parte do Correr e Superar contribui para uma história construída dia após dia — marcada por união, dedicação, amizade e amor pela corrida.</p>
+      </div>
+    </section>
+
+    <div class="divider" role="presentation" aria-hidden="true"></div>
+
+    <!-- CAMISAS -->
+    <section id="camisas" class="shirts" aria-labelledby="shirts-title">
+      <div class="container">
+        <span class="section-label">Uniforme oficial</span>
+        <h2 id="shirts-title" class="section-title">Nossas Camisas</h2>
+
+        <p class="shirts-description">Vista a identidade do Correr e Superar. Nossas camisas representam o espírito do grupo: movimento, superação e comunidade. Seja parte dessa história.</p>
+
+        <div class="shirts-grid" role="list" aria-label="Modelos das camisas do Correr e Superar">
+
+          <!-- Modelo 1: Camiseta -->
+          <article class="shirt-card" role="listitem">
+            <div class="shirt-model-head">
+              <h3 class="shirt-model-name">Camiseta</h3>
+              <span class="shirt-model-tag">Manga curta</span>
+            </div>
+            <div class="shirt-views">
+              <div class="shirt-view">
+                <img class="shirt-img" src="img/camiseta-frente.png" width="335" height="355" loading="lazy"
+                     alt="Camiseta do Correr e Superar — vista da frente, com o emblema CS no peito">
+                <p class="shirt-view-label">Frente</p>
+              </div>
+              <div class="shirt-view">
+                <img class="shirt-img" src="img/camiseta-costas.png" width="335" height="355" loading="lazy"
+                     alt="Camiseta do Correr e Superar — vista das costas, com a inscrição Atleta">
+                <p class="shirt-view-label">Costas</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Modelo 2: Regata -->
+          <article class="shirt-card" role="listitem">
+            <div class="shirt-model-head">
+              <h3 class="shirt-model-name">Regata</h3>
+              <span class="shirt-model-tag">Sem manga</span>
+            </div>
+            <div class="shirt-views">
+              <div class="shirt-view">
+                <img class="shirt-img" src="img/regata-frente.png" width="215" height="330" loading="lazy"
+                     alt="Regata do Correr e Superar — vista da frente, com o emblema CS no peito">
+                <p class="shirt-view-label">Frente</p>
+              </div>
+              <div class="shirt-view">
+                <img class="shirt-img" src="img/regata-costas.png" width="215" height="330" loading="lazy"
+                     alt="Regata do Correr e Superar — vista das costas, com a inscrição Atleta">
+                <p class="shirt-view-label">Costas</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <a href="https://wa.me/5581995609589?text=Ol%C3%A1%2C%20quero%20adquirir%20uma%20camisa%20do%20Correr%20e%20Superar!"
+           class="btn-secondary" target="_blank" rel="noopener noreferrer"
+           aria-label="Adquira já sua camisa pelo WhatsApp">Adquira Já</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER / CONTATO
+  =========================================== -->
+  <footer id="contato" class="contact" role="contentinfo">
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="contact-brand">
+          <div class="contact-logo">
+            <svg class="logo-mark" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <use href="#cs-logo"></use>
+            </svg>
+            <span class="logo-word">Correr <span>e</span> Superar</span>
+          </div>
+          <p class="contact-location">Jaboatão dos Guararapes — PE</p>
+        </div>
+
+        <address style="font-style:normal">
+          <ul class="contact-list" role="list">
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <a href="mailto:correr.e.superar2025@gmail.com" aria-label="Enviar e-mail para correr.e.superar2025@gmail.com">correr.e.superar2025@gmail.com</a>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.09 3.18C.09 2.09.98 1.2 2.07 1.2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7 2 2 0 011.72 2.03z"/></svg>
+              </span>
+              <a href="https://wa.me/5581995609589" target="_blank" rel="noopener noreferrer" aria-label="Falar via WhatsApp: (81) 9 9560-9589">(81) 9 9560-9589</a>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </span>
+              <a href="https://instagram.com/correr_e_superar" target="_blank" rel="noopener noreferrer" aria-label="Seguir no Instagram: @correr_e_superar">@correr_e_superar</a>
+            </li>
+          </ul>
+        </address>
+
+        <div class="contact-cta">
+          <a href="https://wa.me/5581995609589?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Correr%20e%20Superar!"
+             class="btn-primary" target="_blank" rel="noopener noreferrer"
+             aria-label="Fale conosco pelo WhatsApp">Fale Conosco</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <div class="container">
+        <p class="footer-copy">&copy; Todos os direitos reservados — Correr e Superar | Jaboatão dos Guararapes - PE</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

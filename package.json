@@ -1,0 +1,12 @@
+{
+  "name": "correr-e-superar",
+  "version": "1.0.0",
+  "description": "Landing page do Correr e Superar — Jaboatão dos Guararapes - PE",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

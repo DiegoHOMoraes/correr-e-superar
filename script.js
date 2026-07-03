@@ -80,7 +80,7 @@
     var current = 0;
     var intervalId = null;
     var userPaused = prefersReduced;
-    var AUTOPLAY_MS = 5000;
+    var AUTOPLAY_MS = 3000;
 
     function goTo(index) {
       current = (index + slides.length) % slides.length;

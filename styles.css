@@ -408,6 +408,139 @@ ul  { list-style: none; }
 }
 .gallery-placeholder svg { opacity: 0.4; }
 
+/* -------- CARROSSEL (galeria de treinões) -------- */
+.gallery-item--carousel { padding: 0; background: var(--preto-fundo); }
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sombreado inferior para garantir contraste dos controles */
+.carousel::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  pointer-events: none;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(10,10,10,0.45);
+  color: var(--branco);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.carousel-arrow:hover,
+.carousel-arrow:focus-visible {
+  background: var(--laranja-acao);
+  outline: none;
+}
+.carousel-arrow--prev { left: 12px; }
+.carousel-arrow--next { right: 12px; }
+
+.carousel-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(10,10,10,0.45);
+  color: var(--branco);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.carousel-toggle:hover,
+.carousel-toggle:focus-visible {
+  background: var(--laranja-acao);
+  outline: none;
+}
+.carousel-toggle .icon-play,
+.carousel-toggle .icon-pause { display: block; }
+
+.carousel-dots {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 14px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.8);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.carousel-dot.is-active {
+  background: var(--laranja-acao);
+  border-color: var(--laranja-acao);
+  transform: scale(1.15);
+}
+.carousel-dot:hover,
+.carousel-dot:focus-visible {
+  border-color: var(--laranja-acao);
+  outline: none;
+}
+
+/* Área de toque confortável para os pontos, sem aumentar o visual */
+.carousel-dots button.carousel-dot {
+  position: relative;
+}
+.carousel-dots button.carousel-dot::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+}
+
 /* -------- SOBRE -------- */
 .about { background: var(--preto-fundo); padding: 64px 0; }
 .about .section-title { color: var(--branco); }
@@ -687,4 +820,5 @@ ul  { list-style: none; }
   .animate-in { animation: none; opacity: 1; }
   .btn-primary:hover { transform: none; }
   .shirt-view:hover { transform: none; }
+  .carousel-track { transition: none; }
 }

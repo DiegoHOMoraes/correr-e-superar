@@ -119,13 +119,39 @@
         <h2 id="gallery-title" class="section-title">Confira Nossos Treinões</h2>
 
         <div class="gallery-grid" role="list" aria-label="Galeria de fotos dos treinões">
-          <figure class="gallery-item" role="listitem">
-            <div class="gallery-placeholder" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-              <span>Foto do Treinão</span>
+          <div class="gallery-item gallery-item--carousel" role="listitem">
+            <div class="carousel" aria-roledescription="carrossel" aria-label="Fotos dos treinões do Correr e Superar">
+              <div class="carousel-track">
+                <figure class="carousel-slide is-active">
+                  <img src="img/2-treinao.jpg" loading="lazy" alt="2º Treinão do Correr e Superar — grupo reunido na quadra em Jaboatão dos Guararapes">
+                </figure>
+                <figure class="carousel-slide">
+                  <img src="img/3-treinao.jpeg" loading="lazy" alt="3º Treinão do Correr e Superar — grupo reunido com as bandeiras do time">
+                </figure>
+                <figure class="carousel-slide">
+                  <img src="img/4-treinao.jpeg" loading="lazy" alt="4º Treinão do Correr e Superar — Somos uma família">
+                </figure>
+              </div>
+
+              <button type="button" class="carousel-arrow carousel-arrow--prev" aria-label="Foto anterior">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button type="button" class="carousel-arrow carousel-arrow--next" aria-label="Próxima foto">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+
+              <button type="button" class="carousel-toggle" aria-label="Pausar apresentação automática" aria-pressed="false">
+                <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><polygon points="6 4 20 12 6 20"/></svg>
+              </button>
+
+              <div class="carousel-dots" aria-label="Selecionar foto do treinão">
+                <button type="button" class="carousel-dot is-active" aria-label="Ir para foto 1 de 3" aria-current="true" data-index="0"></button>
+                <button type="button" class="carousel-dot" aria-label="Ir para foto 2 de 3" aria-current="false" data-index="1"></button>
+                <button type="button" class="carousel-dot" aria-label="Ir para foto 3 de 3" aria-current="false" data-index="2"></button>
+              </div>
             </div>
-            <figcaption class="sr-only">Foto do grupo no treinão especial</figcaption>
-          </figure>
+          </div>
 
           <figure class="gallery-item" role="listitem">
             <div class="gallery-placeholder" aria-hidden="true">

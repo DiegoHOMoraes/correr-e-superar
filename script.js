@@ -63,4 +63,97 @@
 
     animated.forEach(function (el) { observer.observe(el); });
   }
+
+  /* ---- Carrossel de fotos (autoplay com controles acessíveis) ---- */
+  document.querySelectorAll('.carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('.carousel-track');
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-slide'));
+    var dots = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-dot'));
+    var prevBtn = carousel.querySelector('.carousel-arrow--prev');
+    var nextBtn = carousel.querySelector('.carousel-arrow--next');
+    var toggleBtn = carousel.querySelector('.carousel-toggle');
+    var iconPause = toggleBtn ? toggleBtn.querySelector('.icon-pause') : null;
+    var iconPlay = toggleBtn ? toggleBtn.querySelector('.icon-play') : null;
+
+    if (!track || slides.length === 0) { return; }
+
+    var current = 0;
+    var intervalId = null;
+    var userPaused = prefersReduced;
+    var AUTOPLAY_MS = 5000;
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle('is-active', i === current);
+      });
+      dots.forEach(function (dot, i) {
+        var isActive = i === current;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-current', String(isActive));
+      });
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function play() {
+      if (intervalId || userPaused) { return; }
+      intervalId = window.setInterval(next, AUTOPLAY_MS);
+    }
+
+    function stop() {
+      if (intervalId) {
+        window.clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
+
+    function setToggleUI(paused) {
+      if (!toggleBtn) { return; }
+      toggleBtn.setAttribute('aria-pressed', String(paused));
+      toggleBtn.setAttribute(
+        'aria-label',
+        paused ? 'Retomar apresentação automática' : 'Pausar apresentação automática'
+      );
+      if (iconPause) { iconPause.hidden = paused; }
+      if (iconPlay) { iconPlay.hidden = !paused; }
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () { next(); });
+    }
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () { prev(); });
+    }
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goTo(i); });
+    });
+
+    if (toggleBtn) {
+      setToggleUI(userPaused);
+      toggleBtn.addEventListener('click', function () {
+        userPaused = !userPaused;
+        setToggleUI(userPaused);
+        if (userPaused) { stop(); } else { play(); }
+      });
+    }
+
+    // Pausa ao passar o mouse ou focar nos controles; retoma ao sair (se não pausado manualmente)
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', function () { if (!userPaused) { play(); } });
+    carousel.addEventListener('focusin', stop);
+    carousel.addEventListener('focusout', function () { if (!userPaused) { play(); } });
+
+    // Navegação por teclado quando o carrossel está em foco
+    carousel.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { next(); }
+      if (e.key === 'ArrowLeft') { prev(); }
+    });
+
+    goTo(0);
+    if (!userPaused) { play(); }
+  });
 })();
